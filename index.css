@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 header{
     height:12vh;
     display:flex;
@@ -14,22 +18,15 @@ dl{
   font-weight: 400;
   font-style: normal;
 }
-
-.button {
-  border-radius: 20px;
-  background: linear-gradient(to right, #ee65ae, #ff9a8b);
-  color: black;
-  width: 85px;
-  height: 50px;
-  border: 1px solid white;
-  cursor: pointer;
-}
 .hoverButtons {
     cursor: pointer;
-    background: linear-gradient(90deg, #e795e1 0%, #e855c6 100%);
+    background: linear-gradient(to right, #866fc9 0%, #e3dde3 100%);
     color: #222;
-    border: none;
+    border: 1px solid white;
     transition: background 0.3s;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
 }
 .hoverButtons:active{
     transform:scale(0.95);
@@ -41,7 +38,8 @@ dl{
     height: 80vh;
     flex-wrap: wrap;
     align-items: center;
-    background-color: rgb(235, 140, 203);
+    background: linear-gradient(60deg, #7246ca 30%, #cfc7e6 60%);
+    color: white;
 }
 #aboutme{
     display:flex;
@@ -49,19 +47,21 @@ dl{
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding-left: 20%;
-    padding-bottom: 25%;
+    padding-bottom: 15%;
     padding-right: 20%;
     height:50vh;
     text-align: center;
-    background-color: rgb(228, 155, 216);
+    background: linear-gradient(to left, #7246ca 30%, #cfc7e6 60%);
+    font-size: 1.2em;
 }
 .div{
-    background-color: rgba(231, 130, 207, 0.952);
-    color: white;
+    background-color: rgba(207, 201, 232, 0.952);
+    color: black;
     border-radius: 20px;
-    height: 180px;
+    height: 150px;
     width: 200px;
     border: 5px solid white;
+    font-size: 1.2em;
 }
 .size{
     display: flex;
@@ -70,6 +70,54 @@ dl{
     justify-content: space-evenly;
     align-items: center;
     text-align: center; 
+}
+.skilldiv{
+  background-color: rgba(207, 201, 232, 0.952);
+  color: black;
+  border-radius: 20px;
+  height: 180px;
+  width: 200px;
+  border: 5px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  width: 100%;
+  justify-items: center;
+}
+.hoverButton {
+  border-radius: 20px;
+  background: linear-gradient(to right, #866fc9 0%, #e3dde3 100%);
+  color: black;
+  width: 90px;
+  height: 50px;
+  border: 1px solid white;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hoverButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right,  #e3dde3 100% ,#866fc9 0%,);
+}
+
+.hoverButton:active {
+  transform: scale(0.95);
+}
+
+.skilldiv .hoverButton {
+  width: 85px;
+  height: 45px;
+  margin: 0;
 }
 
 #projects .size{
@@ -81,6 +129,7 @@ dl{
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
+    font-size: 1em;
 }
 .skill{
     display:flex;
@@ -90,8 +139,8 @@ dl{
     padding-bottom: 7%;
     padding-right: 20%;
     text-align: center;
-    background-color: rgb(235, 140, 203);
-    color: white;
+    background: linear-gradient(60deg, #7246ca 30%, #cfc7e6 60%);
+    color: black;
 }
 #projects{
     display: flex;
@@ -99,7 +148,7 @@ dl{
     align-items: center;
     text-align: center;
     gap:10px;
-    background-color: rgb(228, 155, 216);
+    background: linear-gradient(to left, #7246ca 30%, #cfc7e6 60%);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -112,10 +161,10 @@ dl{
     align-items: center;
     text-align: center;
     border-radius: 20px;
-    background-color: rgba(231, 130, 207, 0.952);
+    background-color: rgba(124, 52, 211, 0.313);
     color: white;
     width: 300px;
-    height: 350px;
+    height: 380px;
     border: 1px solid white;
     padding: 20px;
     padding-right: 20px;
@@ -127,16 +176,18 @@ dl{
   text-align: center;
   align-items: center;
   padding: 40px;
-  background-color: rgb(235, 140, 203);
+  background: linear-gradient(60deg, #7246ca 30%, #cfc7e6 60%);
+  
 }
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   background: rgba(229, 131, 218, 0.1);
   border-radius: 10px;
-  background-color: #e072c6;
+  background: linear-gradient(to left, #7246ca 30%, #cfc7e6 60%);
+  
 }
 
 .contact-left, .contact-right {
@@ -147,30 +198,56 @@ dl{
 }
 
 form input, form textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
+  width: 90%;
+  margin: 8px 0;
+  padding: 8px;
   border: none;
   border-radius: 5px;
-  text-anchor: black;
-  background-color: rgb(250, 228, 248);
+  font-size: 0.9em;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
 }
 form button {
   padding: 0.5rem;
-  background-color: #0077cc;
-  color: white;
-  border: none;
+  background-color: #f3f4f5;
+  color: black;
+  border: 20px;
   cursor: pointer;
 }
 footer{
   height: 10vh;
   display: flex;
   justify-content: space-evenly;
-  background-color: rgb(228, 155, 216);
+  background: linear-gradient(to left, #7246ca 30%, #cfc7e6 60%);
+  font-size: 1.5em;
 }
 .icons{
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
     margin-top: 15px;
+}
+@media (max-width: 768px) {
+  header {
+      padding: 10px 20px !important;
+      flex-direction: column;
+      height: auto;
+  }
+}
+@media (max-width: 480px) {
+  header {
+      padding: 10px 10px !important;
+  }
+}
+/* Chrome-specific fix for section overlap */
+section {
+  overflow: hidden;
+}
+
+#aboutme {
+  min-height: 75vh;
+}
+
+#summary {
+  min-height: 80vh;
 }
